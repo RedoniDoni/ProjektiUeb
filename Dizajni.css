@@ -66,3 +66,23 @@ nav ul li a {
 #signup-button {
     background-color: #28a745;
 }
+
+.rubrika-fotot {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    margin: 20px auto;
+    max-width: 1000px;
+    flex-wrap: wrap;
+    padding: 20px
+}
+.foto {
+    flex-basis: 300px; 
+    margin-bottom: 20px; 
+}
+.foto img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px; 
+  }
