@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Login/Sign Up Form</title>
+</head>
+
+<body>
+  <div class="container">
+    <form id="loginForm" class="form">
+      <h2 >Kyçu</h2>
+      <label for="emailOrPhone" ><b>Email or Phone:</b></label>
+      <input type="email" id="emailOrPhone" name="emailOrPhone">
+      <label for="password" ><b>Password:</b></label>
+      <input type="password" id="password" name="password">
+      <button type="submit"  ><b>Kyçu</b></button>
+      <p class="signup-link"><i><b>Nuk keni account? Kliko -></b> <a href="#" onclick="showSignup()">Regjistrohu</a></i></p>
+    </form>
+
+    <form id="signupForm" class="form hidden">
+      <h2 >Regjistrohu</h2>
+      <label  for="emriSignUp" ><b>Emri juaj:</b></label>
+      <input type="text" id="emriSignUp" name="emriSignUp" >
+      <label for="mbiemriSignUp" ><b>Mbiemri juaj: </b></label>
+      <input type="text" id="mbiemriSignUp" name="mbiemriSignUp" >
+      <label for="emailiSignUp" ><b>Email or phone: </b></label>
+      <input type="text" id="emailiSignUp" name="emailiSignUp" >
+      <label for="passwordiSignUp" ><b>Krijo nje Password: </b></label>
+      <input type="password" id="passwordiSignUp" name="passwordiSignUp" >
+      <button type="submit" ><b>Regjistrohu </b></button>
+      <p class="signup-link" s"><i><b>Ju keni nje account?  Klikoni -></b> <a href="#" onclick="showLogin()">Kyçu</a> </i></p>
+    </form>
+  </div>
+  <script ></script>
+</body>
+
+</html>
