@@ -1,77 +1,117 @@
 body {
+    margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
-    margin: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: lightblue;
-}
-.container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 35px;
-    box-shadow: 0 0 5px rgba(10, 10, 10, 0.1);
-    padding-top: 10px;
-}
-#emailOrPhone{
-    text-align: left;
-}
-.form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-}
-input,
-button {
-    padding: 10px;
-    width: 250px;
-    border-radius: 8px;
-    border: 4px solid #ccc;
-    transition: background-color 0.3s ease;
-    margin-bottom: 8px;
-}
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-  padding: 10px;
-  width: 250px;
-  border-radius:30px;
-  border: 3px solid #ccc;
-  transition: background-color 0.3s ease;
-}
-
-.form label {
-    text-align: left; 
-    width: 100%; 
-    display: block; 
-    margin-bottom: 5px; 
-}
-button {
-    padding: auto;
-    width: 100px;
-    border-radius: 20px;
-    border: none;
-    cursor: pointer;
-    background-color: #1877f2;
-    color: white;
-    transition: background-color 0.3s ease;
-}
-
-.hidden {
-    display: none;
 }
   
-.signup-link {
-    margin-top: 10px;
+    
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: lightgray;
+}
+  
+.header-left {
+    flex: 1;
+}
+  
+.header-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+  
+#company-name {
+    font-size: 24px;
+    font-weight: bold;
+}
+  
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+  
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+  
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+.buttons {
+    display: flex;
+}
+
+#login-button,
+#signup-button {
+    padding: 8px 15px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    color: #fff;
+    background-color: blue;
+    text-decoration: none;
     font-size: 14px;
 }
-  
-.signup-link a {
-    color: #1877f2;
-    text-decoration: none;
+    
+#signup-button {
+    background-color: green;
 }
-#signupForm{
+.fotoParaRubrikes {
+    width: 100%;
+    max-height: 30cm;
+    overflow: hidden; 
+}
+  
+.fotoParaRubrikes img {
+    width: 100%;
+    height: auto;
+}
+fieldset {
+    border-color: blue;
+    border-style: double;
     border-radius: 40px;
+    padding: 20px;
+    margin: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.rubrika-fotot {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto; 
+    width: 100%; 
+    max-width: 960px; 
+    margin: 0 auto; 
+  }
+.foto {
+    width: calc(33.33% - 20px); 
+    margin-bottom: 20px;
+    max-width: 300px; 
+    max-height: 200px; 
+    overflow: hidden;
+    box-sizing: border-box;
+}
+  
+.foto img {
+    width: 100%;
+    display: block; 
+    border-radius: 30px;
+    height: 100%; 
+    object-fit: cover;
+    box-shadow: 10 10 30px rgba(0, 0, 0, 0.13);
+}
+#legend{
+    text-align: center;
+    text-decoration: dotted;
 }
