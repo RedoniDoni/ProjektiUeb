@@ -41,3 +41,37 @@ input[type="password"] {
   border: 3px solid #ccc;
   transition: background-color 0.3s ease;
 }
+
+.form label {
+    text-align: left; 
+    width: 100%; 
+    display: block; 
+    margin-bottom: 5px; 
+}
+button {
+    padding: auto;
+    width: 100px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    background-color: #1877f2;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.hidden {
+    display: none;
+}
+  
+.signup-link {
+    margin-top: 10px;
+    font-size: 14px;
+}
+  
+.signup-link a {
+    color: #1877f2;
+    text-decoration: none;
+}
+#signupForm{
+    border-radius: 40px;
+}
