@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+ 
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: lightgray;
+}
+  
+.header-left {
+    flex: 1;
+}
+  
+.header-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+  
+#company-name {
+    font-size: 24px;
+    font-weight: bold;
+}
+  
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+  
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+  
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+.buttons {
+    display: flex;
+}
+
+#login-button,
+#signup-button {
+    padding: 8px 15px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    color: #fff;
+    background-color: blue;
+    text-decoration: none;
+    font-size: 14px;
+}
+    
+#signup-button {
+    background-color: green;
+}
+
+main{
+    padding: 25px;
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 5px solid blue;
+    border-radius: 30px;
+    font-size: 18px;}
+  
+table th,
+table td {
+    border: 5px solid grey;
+    padding: 8px;
+    font-size: 18px;
+    text-align: center;
+}
+  
+fieldset {
+    border: 30px solid gray;
+    border-radius:30px;
+    padding: 20px;
+    font-size: 25px;
+}
+  
+legend {
+    text-align: center;
+    font-weight: bold;
+    color: blue;
+}
+
+tr:nth-child(even) {
+    background-color: lightblue;
+}
+  
+tr:nth-child(odd) {
+    background-color: blue;
+}
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: lightgray;
+    padding: 20px;
+}
+
+.footer-left,
+.footer-right {
+    flex: 1;
+    text-align: center;
+}
+  
+.footer-center {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+  
+.footer-center > div {
+    margin-bottom: 10px;
+}
+  
+.social-icons img {
+    margin-right: 5px;
+}
+  
