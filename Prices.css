@@ -49,8 +49,7 @@ nav ul li a {
     display: flex;
 }
 
-#login-button,
-#signup-button {
+#login-button {
     padding: 8px 15px;
     margin-left: 10px;
     border: none;
@@ -61,15 +60,10 @@ nav ul li a {
     text-decoration: none;
     font-size: 14px;
 }
-    
-#signup-button {
-    background-color: green;
-}
 
 main{
     padding: 25px;
 }
-
 
 table {
     border-collapse: collapse;

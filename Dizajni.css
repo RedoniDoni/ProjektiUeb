@@ -50,8 +50,7 @@ nav ul li a {
     display: flex;
 }
 
-#login-button,
-#signup-button {
+#login-button{
     padding: 8px 15px;
     margin-left: 10px;
     border: none;
@@ -61,10 +60,6 @@ nav ul li a {
     background-color: blue;
     text-decoration: none;
     font-size: 14px;
-}
-    
-#signup-button {
-    background-color: green;
 }
 .fotoParaRubrikes {
     width: 100%;
