@@ -15,6 +15,7 @@
         <li><a href="Projekti.php">Home</a></li>
         <li><a href="Slider.php">Products</a></li>
         <li><a href="Prices.php">Prices</a></li>
+        <li><a href="AboutUs.php">About Us</a></li>
       </ul>
     </nav>
     <div class="header-right">
