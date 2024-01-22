@@ -12,11 +12,11 @@
     </div>
     <nav>
       <ul>
-        <li><a href="Projekti.php">Home</a></li>
+        <li><a href="Home.php">Home</a></li>
         <li><a href="Slider.php">Products</a></li>
         <li><a href="Prices.php">Prices</a></li>
         <li><a href="AboutUs.php">About Us</a></li>
-        <li><a href="ContactUs.php">Contact Us</a></li>
+        <li><a href="History.php">History</a></li>
       </ul>
     </nav>
     <div class="header-right">
@@ -61,7 +61,7 @@
               <img src="img18.jpg" alt="Photo 18">
           </div>
           <div class="text-container">
-              <p>Kompania jonë operon për më shumë se 10 vite. Filluam me 2 vetura, ndërsa sot kemi mbi 200 vetura në dispozicion. Saktësia dhe siguria në 
+              <p>Kompania jonë operon për më shumë se 20 vite. Filluam me 2 vetura, ndërsa sot kemi mbi 200 vetura në dispozicion. Saktësia dhe siguria në 
           çdo aspekt na dallojnë nga kompanitë tjera ekzistuese!</p>
           </div>
       </div>
