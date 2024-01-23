@@ -3,8 +3,6 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
 }
-  
-    
 header {
     display: flex;
     justify-content: space-between;
@@ -111,6 +109,7 @@ fieldset {
     text-align: center;
     text-decoration: dotted;
 }
+
 footer {
     display: flex;
     justify-content: space-between;
