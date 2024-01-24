@@ -61,12 +61,6 @@ nav ul li a {
     text-decoration: none;
     font-size: 14px;
 }
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 0;      
-} 
 .container {
     max-width: 400px;
     margin: 0 auto;
@@ -160,4 +154,27 @@ footer {
 
 .social-icons img {
     margin-right: 5px;
+}
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center; 
+    }
+
+    .header-right {
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .car-details p {
+        flex: 0 0 100%;
+        margin-bottom: 10px;
+    }
+
+    .footer-left,
+    .footer-right,
+    .footer-center {
+        flex: 100%;
+        text-align: center;
+    }
 }

@@ -59,11 +59,6 @@ nav ul li a {
     text-decoration: none;
     font-size: 14px;
 }
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
 main {
     display: flex;
     flex-direction: column; 
@@ -130,4 +125,32 @@ footer {
 .social-icons img {
     margin-right: 5px;
 }
-  
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column; 
+    }
+
+    .header-right {
+        justify-content: center; 
+        margin-top: 20px; 
+    }
+
+    .image-text-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-text-container:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .text-container {
+        padding: 20px;
+    }
+
+    .footer-left,
+    .footer-right,
+    .footer-center {
+      flex: 100%; 
+    }
+}

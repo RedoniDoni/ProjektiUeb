@@ -115,7 +115,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     background-color: lightgray;
-    padding: 20px;
+    padding: 0px;
 }
 
 .footer-left,
@@ -137,4 +137,33 @@ footer {
   
 .social-icons img {
     margin-right: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column; 
+    }
+
+    .header-right {
+        justify-content: center; 
+        margin-top: 20px; 
+    }
+
+    fieldset {
+      margin: 10px; 
+    }
+  
+    .rubrika-fotot {
+      justify-content: center; 
+    }
+  
+    .foto {
+      width: calc(50% - 20px); 
+    }
+
+    .footer-left,
+    .footer-right,
+    .footer-center {
+      flex: 100%; 
+    }
 }

@@ -114,7 +114,8 @@ footer {
     justify-content: space-between;
     align-items: center;
     background-color: lightgray;
-    padding: 20px;
+    margin: 0;
+    padding: 0;
 }
 
 .footer-left,
@@ -136,4 +137,34 @@ footer {
   
 .social-icons img {
     margin-right: 5px;
+}
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column; 
+    }
+
+    .header-right {
+        justify-content: center; 
+        margin-top: 20px; 
+    }
+
+    .images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-container {
+        margin-right: 10px;
+    }
+
+    .image-container img {
+        width: 100%;
+        height: auto;
+        border-radius: 25px;
+    }
+    .footer-left,
+    .footer-right,
+    .footer-center {
+      flex: 100%; 
+    }
 }

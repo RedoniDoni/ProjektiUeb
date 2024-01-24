@@ -70,7 +70,8 @@ table {
     width: 100%;
     border: 5px solid blue;
     border-radius: 30px;
-    font-size: 18px;}
+    font-size: 18px;
+}
   
 table th,
 table td {
@@ -128,4 +129,3 @@ footer {
 .social-icons img {
     margin-right: 5px;
 }
-  

@@ -93,3 +93,17 @@ button[type="submit"] {
     color: red;
     margin: 0px;
 }
+@media screen and (max-width: 600px) {
+    .form {
+        width: 80%; 
+    }
+
+    input,
+    button {
+        width: 100%; 
+    }
+
+    h2 {
+        font-size: 25px; 
+    }
+}
