@@ -129,34 +129,3 @@ footer {
 .social-icons img {
     margin-right: 5px;
 }
-@media screen and (max-width: 768px) {
-    header {
-        flex-direction: column; 
-    }
-
-    .header-right {
-        justify-content: center; 
-        margin-top: 20px; 
-    }
-
-    table {
-        font-size: 4px;
-        overflow-x: auto;
-    }
-
-    th, td {
-        font-size: 5px;
-        padding: 6px;  
-    }
-
-    fieldset {
-        padding: 15px;
-        font-size: 20px; 
-    }
-
-    .footer-left,
-    .footer-right,
-    .footer-center {
-        flex: 100%; 
-    }
-}

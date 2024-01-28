@@ -29,7 +29,7 @@
   <main>
       <fieldset>
           <legend> Prices for Cars</legend>
-          <table border = 1>
+          <table border = "1">
               <tr>
                   <th></th>
                   <th>Marka</th>

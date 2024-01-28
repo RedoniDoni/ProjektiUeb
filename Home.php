@@ -18,6 +18,8 @@
         <li><a href="Prices.php">Prices</a></li>
         <li><a href="AboutUs.php">About Us</a></li>
         <li><a href="History.php">History</a></li>
+        <li><a href="dashboard.php" class="<?php echo $hide?>">Dashboard</a></li>
+        <li><a href="logout.php">Logout</a></li>
       </ul>
     </nav>
     <div class="header-right">
@@ -30,6 +32,9 @@
     <div class="fotoParaRubrikes">
       <img src="imgbg3.jpg" alt="Fotoja Lart" />
     </div>
+    <h2>Kujdes, shiko edhe njehere se spom len koment qitu</h2>
+    <h3><?php echo "Username: ".$_SESSION['username']."<br>" ?></h3>
+    <h3><?php echo "Login Time: ".$_SESSION['loginTime']."<br>"?></h3>
     <fieldset>
       <legend id="legend"><h2>Veturat tona</h2></legend>
     <div class="rubrika-fotot">
@@ -107,3 +112,7 @@
   </footer>
 </body>
 </html>
+
+<?php
+  }
+?>

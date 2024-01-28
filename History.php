@@ -57,7 +57,7 @@
     </fieldset>
     <fieldset>
       <legend><h2>Historia personale e kompanisë</h2></legend>
-      <table border = 1>
+      <table id="dynamicTable" border="1">
           <tr>
               <th></th>
               <th>Vitet</th>

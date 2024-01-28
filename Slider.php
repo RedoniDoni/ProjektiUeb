@@ -26,7 +26,7 @@
     </div>
   </header>
   <main>
-    <h1 style="color: blue;"><b>Karakteristikat e Veturave</b></h1>
+    <h1 style="color: blue; text-align:center;"><b>Karakteristikat e Veturave</b></h1>
     <div class="slideshow-container">
       <img id="slideshow" src="img01.jpg"/>
       <div class="button-container">
