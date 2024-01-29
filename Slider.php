@@ -77,6 +77,7 @@
   
     <script>
       let i = 0;
+      
   let imgArray = ['img01.jpg', 'img02.jpg', 'img03.jpg', 'img04.jpg', 'img05.jpg', 'img06.jpg',
     'img07.jpg', 'img08.jpg', 'img09.jpg', 'img10.jpg', 'img11.jpg', 'img12.jpg'];
   
@@ -101,6 +102,7 @@
     document.getElementById('viti').textContent = 'Viti i prodhimit: ' + carDetails[i].viti;
     document.getElementById('kilometra').textContent = 'Kilometra: ' + carDetails[i].kilometra;
   }
+  
   
   function nextImg() {
     if (i < imgArray.length - 1) {
