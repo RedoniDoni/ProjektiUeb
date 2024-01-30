@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+label{
+    font-size: 20px;
+    color: rgb(161, 31, 142);
+}
+.container{
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #f3d3f5;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+h1{
+    margin: 20px 0 30px 30px;
+    color: rgb(161, 31, 142);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+input{
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+}
+
+.saveButton{
+    background-color: rgb(241 204 238);
+    color: rgb(161, 31, 142);
+    font-weight: 700;
+    padding: 10px;
+    border: 2px solid rgb(161, 31, 142);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+.butoniSave{
+    display: flex;
+    justify-content: center;
+}
+.saveButton:hover{
+    background-color: rgb(241 204 238);
+}
+
+main{
+    padding: 20px 20px;
+    background-color: rgb(241 204 238);
+}
