@@ -36,7 +36,7 @@
             <p>Insertimi, fshirja dhe editimi i user-ave:</p>
             <ul>
                 <li><a href="InsertUser.php"><button id="insert-button">Insert User</button></a></li>
-                <li><a href="deleteUser.php"><button id="delete-button">Delete/Edit User</button></a></li>
+                <li><a href="deleteUser.php"><button id="delete-button">Delete User / Edit User</button></a></li>
                 <!--<li><a href="editUser.php"><button id="edit-button">Edit User</button></a></li>-->
             </ul>
         </div>
@@ -46,27 +46,24 @@
             <p>Insertimi, fshirja dhe editimi i kompanive:</p>
             <ul>
                 <li><a href="InsertCompany.php"><button id="insert-button">Insert Company</button></a></li>
-                <li><a href="deleteCompany.php"><button id="delete-button">Delete/Edit Company</button></a></li>
+                <li><a href="deleteCompany.php"><button id="delete-button">Delete Company / Edit Company</button></a></li>
             </ul>
         </div>
     </div>
-
     <div class="operation-group">
         <div class="operation-content">
-            <p>Insertimi, fshirja dhe editimi i veturave:</p>
+            <p>Insertimi i veturave:</p>
             <ul>
                 <li><a href="InsertCar.php"><button id="insert-button">Insert Car</button></a></li>
-                <li><a href="deleteCar.php"><button id="delete-button">Delete/Edit Car</button></a></li>
             </ul>
         </div>
     </div>
 
     <div class="operation-group">
         <div class="operation-content">
-            <p>Insertimi, fshirja dhe editimi i historive:</p>
+            <p>Insertimi i historive:</p>
             <ul>
                 <li><a href="InsertHistory.php"><button id="insert-button">Insert History</button></a></li>
-                <li><a href="deleteHistory.php"><button id="delete-button">Delete/Edit History</button></a></li>
             </ul>
         </div>
     </div>

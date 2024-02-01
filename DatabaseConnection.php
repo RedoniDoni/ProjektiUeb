@@ -1,5 +1,5 @@
 <?php
-    class DatabaseConnection{
+    class DatabaseConnection{  
         private $server = "127.0.0.1";
         private $username = "root";
         private $password = "";

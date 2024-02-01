@@ -4,26 +4,24 @@
     class UserRepository{
         private $connection;
 
-        public function __construct()
-        {
+        public function __construct(){
             $conn = new DatabaseConnection;
             $this->connection = $conn->startConnection();
         }
-
 
         public function insertUser($user){
             $conn = $this->connection;
 
             $emri = $user->getEmri();
             $mbiemri = $user->getMbiemri();
-            $emaili = $user->getEmaili();
-            $passwordi = $user->getPasswordi();
-            $roli=$user->getRoli();
+            $email = $user->getEmail();
+            $password = $user->getPassword();
+            $role = $user->getRole();
 
-            $sql = "INSERT INTO useri(Emri, Mbiemri, Emaili, Passwordi, Roli) VALUES (?,?,?,?,?,?,?,?)";
+            $sql = "INSERT INTO user(emri, mbiemri, email, password, role) VALUES (?,?,?,?,?)";
 
             $statement = $conn->prepare($sql);
-            $statement->execute([$emri, $mbiemri, $emaili, $passwordi, $roli]);
+            $statement->execute([$emri, $mbiemri, $email, $password, $role]);
 
             echo "<script>alert('U shtua me sukses!')</script>";
         }
@@ -38,14 +36,13 @@
             return $users;
         }
 
-
         
-        public function editUser($id, $emri, $mbiemri, $emaili, $passwordi, $roli){
+        public function editUser($id, $emri, $mbiemri, $email, $password, $role){
             $conn = $this->connection;
-            $sql = "UPDATE useri SET Emri=?,Mbiemri=?, Emaili=?, Passwordi=?,Roli=? WHERE Id=?";
+            $sql = "UPDATE user SET emir=?,mbiemri=?, email=?, password=?,role=? WHERE Id=?";
 
             $statement = $conn->prepare($sql);
-            $statement->execute([$emri,$mbiemri, $emaili,$passwordi, $roli, $id]);
+            $statement->execute([$emri, $mbiemri, $email, $password, $role, $id]);
 
             echo "<script>alert('U ndryshua me sukses!')</script>";
 
@@ -67,7 +64,7 @@
 
             $statement = $conn->prepare($sql);
             $statement->execute([$id]);
-            $student=$statement->fetch();
+            $user = $statement->fetch();
 
             return $user;
         }

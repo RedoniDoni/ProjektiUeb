@@ -1,3 +1,8 @@
+<?php
+  include_once 'UserRepository.php';
+  session_start();
+  $hide = "hide";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +23,9 @@
         <li><a href="Prices.php">Prices</a></li>
         <li><a href="AboutUs.php">About Us</a></li>
         <li><a href="History.php">History</a></li>
-        <li><a href="Dashboard.php" class="<?php echo $hide?>">Dashboard</a></li>
+        <?php if (isset($_SESSION['role']) && $_SESSION['role'] == "admin"): ?>
+          <li><a href="Dashboard.php">Dashboard</a></li>
+        <?php endif; ?>
         <li><a href="LogInForm.php">Log Out</a></li>
       </ul>
     </nav>

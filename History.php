@@ -1,11 +1,15 @@
 <?php
-include_once 'CarRepository.php';
-$carRepository = new CarRepository();
-$cars = $carRepository->getAllCars();
+  include_once 'CarRepository.php';
+  $carRepository = new CarRepository();
+  $cars = $carRepository->getAllCars();
 
-include_once 'HistoryRepository.php';
-$historyRepository = new HistoryRepository();
-$historys = $historyRepository->getAllHistorys();
+  include_once 'HistoryRepository.php';
+  $historyRepository = new HistoryRepository();
+  $historys = $historyRepository->getAllHistorys();
+
+  include_once 'UserRepository.php';
+  session_start();
+  $hide = "hide";
 
 ?>
 <!DOCTYPE html>
@@ -27,7 +31,9 @@ $historys = $historyRepository->getAllHistorys();
         <li><a href="Prices.php">Prices</a></li>
         <li><a href="AboutUs.php">About Us</a></li>
         <li><a href="History.php">History</a></li>
-        <li><a href="Dashboard.php" class="<?php echo $hide?>">Dashboard</a></li>
+        <?php if (isset($_SESSION['role']) && $_SESSION['role'] == "admin"): ?>
+          <li><a href="Dashboard.php">Dashboard</a></li>
+        <?php endif; ?>
         <li><a href="LogInForm.php">Log Out</a></li>
       </ul>
     </nav>

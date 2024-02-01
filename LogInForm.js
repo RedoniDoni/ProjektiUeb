@@ -9,8 +9,8 @@ function showLogin() {
 }function validateFormLogIn() {
     let isValid = true;
 
-    const emailInput = document.getElementById('email');
-    const passwordInput = document.getElementById('password');
+    const email = document.getElementById('email');
+    const password = document.getElementById('password');
 
     const emailValue = emailInput.value.trim();
     const passwordValue = passwordInput.value.trim();
