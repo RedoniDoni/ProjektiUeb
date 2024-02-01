@@ -24,51 +24,73 @@
             $historyRepository->insertHistory($history);
         }
     }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tickets</title>
-    <link rel="stylesheet" href="InsertHistory.css">
+    <title>Historys</title>
+    <link rel="stylesheet" href="InsertCompany.css">
 </head>
 <body>
     <?php
         include 'header.php';
     ?>
-    <main>
-        <h1>Insert Historys</h1>
+        <main>
+        <fieldset>
+        <h1>Insert History</h1>
         <div class="container">
-            <form action="<?php echo $_SERVER['PHP_SELF']?>" method="POST">
+            <form method="POST">
+                <div class="form-group">
                 <label>Pershkrimi:</label>
                 <input type="text" name="pershkrimi">
+                </div>
 
+                <div class="form-group">
                 <label>Vitet:</label>
                 <input type="text" name="vitet">
+                </div>
 
+                <div class="form-group">
                 <label>Numri i veturave:</label>
                 <input type="text" name="nrvetura">
+                </div>
 
+                <div class="form-group">
                 <label>Numri i veturave me qira:</label>
                 <input type="text" name="nrqira">
+                </div>
 
+                <div class="form-group">
                 <label>Vleresimi nga 1-10:</label>
                 <input type="text" name="vleresimi">
+                </div>
                 
+                <div class="form-group">
                 <label>Te ardhura:</label>
                 <input type="text" name="para">
+                </div>
 
+                <div class="form-group">
                 <label>Shpenzime:</label>
                 <input type="text" name="shpenzime">
+                </div>
 
+
+                <div class="form-group">
                 <label>Fitim/Humbje:</label>
                 <input type="text" name="fitim">
+                </div>
+
+                
                 <div class="butoniSave">
                     <button type="submit" name="submit" class="saveButton">Save</button>
                 </div>
             </form>
         </div>
+    </fieldset>
     </main>
     <?php
         include 'footer.php';

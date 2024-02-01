@@ -8,27 +8,28 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh; 
+    margin-top: 90px;
+    margin-bottom: 90px;
 }
 
 fieldset {
     border: 2px solid #007acc;
     border-radius: 10px;
-    padding: 25px;
+    padding: 40px;
     width: 100%;
-    max-width: 600px;
-    max-height: 400px;
+    max-width: 700px;
+    max-height: 1200px;
     border-style: dashed;
 }
 
 h1 {
     text-align: center;
     color: #007acc;
-    margin-bottom: 20px; 
+    margin-bottom: 40px; 
 }
 
 .container {
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .form-group {
@@ -66,9 +67,10 @@ input {
     border-radius: 15px;
     cursor: pointer;
     font-size: 16px;
+    width: auto; 
+    max-width: 200px; 
 }
 
 .saveButton:hover {
     background-color: #00588f;
 }
-

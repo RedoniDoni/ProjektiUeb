@@ -16,6 +16,7 @@
             $carRepository->insertCar($car);
         }
     }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +24,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cars</title>
-    <link rel="stylesheet" href="InsertCar.css">
+    <link rel="stylesheet" href="InsertCompany.css">
 </head>
 <body>
     <?php
@@ -51,7 +52,6 @@
         </div>
       </fieldset>
     </main>
-    <main>
     <?php
         include 'footer.php';
     ?>

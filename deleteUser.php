@@ -6,4 +6,6 @@ $strep = new UserRepository();
 $strep->deleteUser($id);
 
 header("location:users.php");
+
+
 ?>

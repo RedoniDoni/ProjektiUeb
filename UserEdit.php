@@ -26,23 +26,48 @@ if(isset($_POST['editBtn'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Company</title>
-    <link rel="stylesheet" href="editUser.css">
+    <link rel="stylesheet" href="InsertCompany.css">
 </head>
 <body>
     <?php
         include 'header.php';
     ?>
    <main>
-    <h3>Edit User</h3>
-    <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
-     
-        <input type="text" name="emri"  value="<?php echo $user['emri']?>"> <br> <br> 
-        <input type="text" name="mbiemri"  value="<?php echo $user['mbiemri']?>"> <br> <br>
-        <input type="text" name="email"  value="<?php echo $user['email']?>"> <br> <br>
-        <input type="text" name="password"  value="<?php echo $user['password']?>"> <br> <br>
-        <input type="text" name="role"  value="<?php echo $user['role']?>"> <br> <br>
-        <input type="submit" name="editBtn" value="save"> <br> <br>
-    </form>
+    <fieldset>
+    <h1>Edit User</h1>
+    <div class="container">
+        <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
+            <div class="form-group">
+            <label>Emri:</label>
+            <input type="text" name="emri"  value="<?php echo $user['emri']?>"> <br> <br> 
+            </div>
+
+            <div class="form-group">
+            <label>Mbiemri:</label>
+            <input type="text" name="mbiemri"  value="<?php echo $user['mbiemri']?>"> <br> <br>
+            </div>
+
+            <div class="form-group">
+            <label>Emaili:</label>
+            <input type="text" name="email"  value="<?php echo $user['email']?>"> <br> <br>
+            </div>
+
+            <div class="form-group">
+            <label>Passwordi:</label>
+            <input type="text" name="password"  value="<?php echo $user['password']?>"> <br> <br>
+            </div>
+
+            <div class="form-group">
+            <label>Roli:</label>
+            <input type="text" name="role"  value="<?php echo $user['role']?>"> <br> <br>
+            </div>
+
+            <div class="butoniSave">
+            <input type="submit" name="editBtn" class ="saveButton" value="save"> <br> <br>
+            </div>
+        </form>
+    </div>
+    </fieldset>
     </main>
     <?php
         include 'footer.php';

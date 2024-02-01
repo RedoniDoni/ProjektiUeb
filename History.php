@@ -9,7 +9,10 @@
 
   include_once 'UserRepository.php';
   session_start();
-  $hide = "hide";
+  if (!isset($_SESSION['role'])) {
+    header("location: LogInForm.php");
+    exit();
+  }
 
 ?>
 <!DOCTYPE html>
@@ -34,7 +37,7 @@
         <?php if (isset($_SESSION['role']) && $_SESSION['role'] == "admin"): ?>
           <li><a href="Dashboard.php">Dashboard</a></li>
         <?php endif; ?>
-        <li><a href="LogInForm.php">Log Out</a></li>
+        <li><a href="LogOut.php">Log Out</a></li>
       </ul>
     </nav>
     <div class="header-right">

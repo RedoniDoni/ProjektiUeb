@@ -6,4 +6,6 @@ $strep = new CompanyRepository();
 $strep->deleteCompany($id);
 
 header("location:companys.php");
+
+
 ?>

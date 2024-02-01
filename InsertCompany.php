@@ -16,6 +16,7 @@
             $companyRepository->insertCompany($company);
         }
     }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

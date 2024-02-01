@@ -39,7 +39,7 @@
         
         public function editUser($id, $emri, $mbiemri, $email, $password, $role){
             $conn = $this->connection;
-            $sql = "UPDATE user SET emir=?,mbiemri=?, email=?, password=?,role=? WHERE Id=?";
+            $sql = "UPDATE user SET emri=?,mbiemri=?, email=?, password=?,role=? WHERE Id=?";
 
             $statement = $conn->prepare($sql);
             $statement->execute([$emri, $mbiemri, $email, $password, $role, $id]);

@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+fieldset {
+    border: 6px solid #ddd;
+    border-style:dashed;
+    padding: 20px;
+    margin: 20px auto;
+    width: 60%; 
+}
+
+legend {
+    font-size: 27px;
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+}
+main {
+    padding: 80px;
+}
+table {
+    align-self: center;
+    width: 97%;
+    border-collapse: collapse;
+    margin: 20px;
+}
+
+th, td {
+    border: 3px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+
+th {
+    background-color: #f2f2f2;
+}

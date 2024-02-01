@@ -1,3 +1,11 @@
+<?php
+include_once 'UserRepository.php';
+  session_start();
+  if (!isset($_SESSION['role'])) {
+    header("location: LogInForm.php");
+    exit();
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,7 +43,7 @@
         <div class="operation-content">
             <p>Insertimi, fshirja dhe editimi i user-ave:</p>
             <ul>
-                <li><a href="InsertUser.php"><button id="insert-button">Insert User</button></a></li>
+                <li><a href="LogInForm.php"><button id="insert-button">Insert User</button></a></li>
                 <li><a href="deleteUser.php"><button id="delete-button">Delete User / Edit User</button></a></li>
                 <!--<li><a href="editUser.php"><button id="edit-button">Edit User</button></a></li>-->
             </ul>

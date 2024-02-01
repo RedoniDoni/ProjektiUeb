@@ -10,8 +10,20 @@ $users = $strep->getAllUsers();
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="companys.css">
+    <title>Companys</title>
+</head>
+    <?php
+        include 'header.php';
+    ?>
     <body>
+        <fieldset>
+            <legend>Tabela e users dhe admins</legend>
         <table>
             <thead>
             <tr>
@@ -21,6 +33,8 @@ $users = $strep->getAllUsers();
                 <th>Emaili</th>
                 <th>Passwordi</th>
                 <th>Roli</th>
+                <th>Edit</th>
+                <th>Delete</th>
             </tr>
             </thead>
             <tbody>
@@ -38,5 +52,9 @@ $users = $strep->getAllUsers();
                 <?php }?> 
             </tbody>
         </table>
+        </fieldset>
+        <?php
+        include 'footer.php';
+        ?>
     </body>
 </html>
