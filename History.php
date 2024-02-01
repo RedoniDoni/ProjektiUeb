@@ -1,3 +1,13 @@
+<?php
+include_once 'CarRepository.php';
+$carRepository = new CarRepository();
+$cars = $carRepository->getAllCars();
+
+include_once 'HistoryRepository.php';
+$historyRepository = new HistoryRepository();
+$historys = $historyRepository->getAllHistorys();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,6 +27,8 @@
         <li><a href="Prices.php">Prices</a></li>
         <li><a href="AboutUs.php">About Us</a></li>
         <li><a href="History.php">History</a></li>
+        <li><a href="Dashboard.php" class="<?php echo $hide?>">Dashboard</a></li>
+        <li><a href="LogInForm.php">Log Out</a></li>
       </ul>
     </nav>
     <div class="header-right">
@@ -29,36 +41,57 @@
     <fieldset>
         <legend><h2>Veturat tona ndër vite</h2></legend>
         <div class="images">
+        <?php foreach ($cars as $car) { ?>
+          <div class="images">
             <div class="image-container">
+                <img src="<?php echo $car['Foto']; ?>" alt="Company Photo">
+                  <p><?php echo $car['Shenim']; ?></p>
+            </div>
+          </div>
+        <?php } ?>
+      </div>
+            <div class="image-container">
+              <!--
                 <img src="img20.jpg" alt="Foto 20">
                 <p>Veturat tona në vitin 2003</p>
+              -->
             </div>
             <div class="image-container">
+              <!--
                 <img src="img21.png" alt="Foto 21">
                 <p>Disa nga veturat tona në vitin 2006</p>
+              -->
             </div>
             <div class="image-container">
+              <!--
                 <img src="img22.jpg" alt="Foto 22">
                 <p>Disa nga veturat tona në vitin 2010</p>
+                -->
             </div>
             <div class="image-container">
+              <!--
                 <img src="img23.jpg" alt="Foto 23">
                 <p>Disa nga veturat tona në vitin 2013</p>
+                -->
             </div>
             <div class="image-container">
+              <!--
                 <img src="img24.jpg" alt="Foto 24">
                 <p>Disa nga veturat tona në vitin 2020</p>
+                -->
             </div>
             <div class="image-container">
+              <!--
                 <img src="img25.webp" alt="Foto 25">
                 <p>Disa nga veturat tona të reja të vitit 2024</p>
+                -->
             </div>
         </div>
     </fieldset>
     <fieldset>
       <legend><h2>Historia personale e kompanisë</h2></legend>
       <table id="dynamicTable" border="1">
-          <tr>
+      <tr>
               <th></th>
               <th>Vitet</th>
               <th>Numri i veturave</th>
@@ -68,6 +101,20 @@
               <th>Shpenzime totale</th>
               <th>Fitimi/Humbja neto</th>
           </tr>
+      </tr>
+        <?php foreach ($historys as $history) { ?>
+          <tr>
+            <th><?php echo $history['Pershkrimi']; ?></th>
+            <td><?php echo $history['Vitet']; ?></td>
+            <td><?php echo $history['NrVetura']; ?></td>
+            <td><?php echo $history['NrQira']; ?></td>
+            <td><?php echo $history['Vleresimi']; ?></td>
+            <td><?php echo $history['Para']; ?></td>
+            <td><?php echo $history['Shpenzime']; ?></td>
+            <td><?php echo $history['Fitim']; ?></td>
+          </tr>
+        <?php } ?>
+        <!--
           <tr>
               <th>Startimi i kompanisë</th>
               <td>2003 - 2004</td>
@@ -94,7 +141,7 @@
               <td>104 vetura</td>
               <td>88 vetura</td>
               <td>8</td>
-              <td>324000</td>
+              <td>324000€</td>
               <td>128000€</td>
               <td>196000€</td>
           </tr>
@@ -108,41 +155,42 @@
               <td>210000€</td>
               <td>315000€</td>
           </tr>
+        -->
       </table>
   </fieldset>
   </main>
   <footer>
-    <div class="footer-left">
-      <h1 style="color: black;"><b>RINAS COMPANY</b></h1>
-      <p>Rinas Company is a rent a car company that has been operating perfectly for more than 20 years.</p>
-    </div>
-
-    <div class="footer-center">
-      <div><p style="font-size: 20px;"><b>Contact Us</b></p></div>
-      <div>
-        <img src="location-icon.png" alt="Location Icon" width="32px" height="32px"/>
-        Prishtine
-      </div>
-      <div>
-        <img src="email-icon.png" alt="Email Icon" width="32px" height="32px"/>
-        rinas.company@gmail.com 
-      </div>
-      <div>
-        <img src="phone-icon.png" alt="Phone Icon" width="32px" height="32px"/>
-        049 111 222
-      </div>
-    </div>
-
-    <div class="footer-right">
-      <p style="font-size: 20px;"><b>Visit Us</b></p>
-      <div class="social-icons">
-        <img src="instagram-icon.png" alt="Instagram Icon" width="40px" height="32px"/>
-        <img src="facebook-icon.png" alt="Facebook Icon" width="40px" height="32px"/>
-        <img src="twitter-icon.png" alt="Twitter Icon" width="40px" height="32px"/>
-        <img src="youtube-icon.png" alt="YouTube Icon" width="40px" height="32px"/>
-        <img src="snapchat-icon.png" alt="Snapchat Icon" width="40px" height="32px"/>
-      </div>
-    </div>
-  </footer>
+        <div class="footer-left">
+          <h1 style="color: black;"><b>RINAS COMPANY</b></h1>
+          <p>Rinas Company is a rent a car company that has been operating perfectly for more than 20 years.</p>
+        </div>
+    
+        <div class="footer-center">
+          <div><p style="font-size: 20px;"><b>Contact Us</b></p></div>
+          <div>
+            <img src="location-icon.png" alt="Location Icon" width="32px" height="32px"/>
+            Prishtine
+          </div>
+          <div>
+            <img src="email-icon.png" alt="Email Icon" width="32px" height="32px"/>
+            rinas.company@gmail.com 
+          </div>
+          <div>
+            <img src="phone-icon.png" alt="Phone Icon" width="32px" height="32px"/>
+            049 111 222
+          </div>
+        </div>
+    
+        <div class="footer-right">
+          <p style="font-size: 20px;"><b>Visit Us</b></p>
+          <div class="social-icons">
+            <img src="instagram-icon.png" alt="Instagram Icon" width="40px" height="32px"/>
+            <img src="facebook-icon.png" alt="Facebook Icon" width="40px" height="32px"/>
+            <img src="twitter-icon.png" alt="Twitter Icon" width="40px" height="32px"/>
+            <img src="youtube-icon.png" alt="YouTube Icon" width="40px" height="32px"/>
+            <img src="snapchat-icon.png" alt="Snapchat Icon" width="40px" height="32px"/>
+          </div>
+        </div>
+      </footer>
 </body>
 </html> 

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Projekti</title>
-  <link rel="stylesheet" href="Home.css">
+  <link rel="stylesheet" href="Dashboard.css">
 </head>
 <body>
 
@@ -28,49 +28,47 @@
       </div>
     </div>
   </header>
-  <main >
-    <div class="fotoParaRubrikes">
-      <img src="imgbg3.jpg" alt="Fotoja Lart" />
-    </div>
+  <main>
     <fieldset>
-      <legend id="legend"><h2>Veturat tona</h2></legend>
-    <div class="rubrika-fotot">
-      <div class="foto">
-        <img src="img01.jpg" alt="Fotoja 1">
-      </div>
-      <div class="foto">
-        <img src="img02.jpg" alt="Fotoja 2">
-      </div>
-      <div class="foto">
-        <img src="img03.jpg" alt="Fotoja 3">
-      </div>
-      <div class="foto">
-        <img src="img04.jpg" alt="Fotoja 4">
-      </div>
-      <div class="foto">
-        <img src="img05.jpg" alt="Fotoja 5">
-      </div>
-      <div class="foto">
-        <img src="img06.jpg" alt="Fotoja 6">
-      </div>
-      <div class="foto">
-        <img src="img07.jpg" alt="Fotoja 7">
-      </div>
-      <div class="foto">
-        <img src="img08.jpg" alt="Fotoja 8">
-      </div>
-      <div class="foto">
-        <img src="img09.jpg" alt="Fotoja 9">
-      </div>
-      <div class="foto">
-        <img src="img10.jpg" alt="Fotoja 10">
-      </div>
-      <div class="foto">
-        <img src="img11.jpg" alt="Fotoja 11">
-      </div>
-      <div class="foto">
-        <img src="img12.jpg" alt="Fotoja 12">
-      </div>
+    <h2>Hapësira vetëm për ADMIN-in</h2>
+    <div class="operation-group">
+        <div class="operation-content">
+            <p>Insertimi, fshirja dhe editimi i user-ave:</p>
+            <ul>
+                <li><a href="InsertUser.php"><button id="insert-button">Insert User</button></a></li>
+                <li><a href="deleteUser.php"><button id="delete-button">Delete/Edit User</button></a></li>
+                <!--<li><a href="editUser.php"><button id="edit-button">Edit User</button></a></li>-->
+            </ul>
+        </div>
+    </div>
+    <div class="operation-group">
+        <div class="operation-content">
+            <p>Insertimi, fshirja dhe editimi i kompanive:</p>
+            <ul>
+                <li><a href="InsertCompany.php"><button id="insert-button">Insert Company</button></a></li>
+                <li><a href="deleteCompany.php"><button id="delete-button">Delete/Edit Company</button></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="operation-group">
+        <div class="operation-content">
+            <p>Insertimi, fshirja dhe editimi i veturave:</p>
+            <ul>
+                <li><a href="InsertCar.php"><button id="insert-button">Insert Car</button></a></li>
+                <li><a href="deleteCar.php"><button id="delete-button">Delete/Edit Car</button></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="operation-group">
+        <div class="operation-content">
+            <p>Insertimi, fshirja dhe editimi i historive:</p>
+            <ul>
+                <li><a href="InsertHistory.php"><button id="insert-button">Insert History</button></a></li>
+                <li><a href="deleteHistory.php"><button id="delete-button">Delete/Edit History</button></a></li>
+            </ul>
+        </div>
     </div>
     </fieldset>
   </main>

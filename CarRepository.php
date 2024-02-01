@@ -1,26 +1,22 @@
 <?php
     include_once('DatabaseConnection.php');
 
-    class CompanyRepository{
+    class CarRepository{
         private $connection;
 
         public function __construct()
         {
             $conn = new DatabaseConnection;
             $this->connection = $conn->startConnection();
-
-            if (!$this->connection) {
-                throw new Exception("Database connection failed.");
-            }
         }
 
 
-        public function insertCompany($kompania){
+        public function insertCar($vetura){
             $conn = $this->connection;
 
-            $foto = $kompania->getFoto();
-            $shenim = $kompania->getShenim();
-            $sql = "INSERT INTO kompania(Foto, Shenim) VALUES (?,?)";
+            $foto = $vetura->getFoto();
+            $shenim = $vetura->getShenim();
+            $sql = "INSERT INTO vetura(Foto, Shenim) VALUES (?,?)";
 
             $statement = $conn->prepare($sql);
             $statement->execute([$foto, $shenim]);
@@ -28,21 +24,20 @@
             echo "<script>alert('U shtua me sukses!')</script>";
         }
 
-        public function getAllCompanys(){
+        public function getAllCars(){
             $conn = $this->connection;
 
-            $sql = "SELECT * FROM kompania";
+            $sql = "SELECT * FROM vetura";
             $statement = $conn->query($sql);
 
-            $companys = $statement->fetchAll();
-            return $companys;
+            $cars = $statement->fetchAll();
+            return $cars;
         }
 
 
-        
-        public function editCompany($id, $foto, $shenim){
+        public function editCar($id, $foto, $shenim){
             $conn = $this->connection;
-            $sql = "UPDATE kompania SET Foto=?,Shenim=? WHERE Id=?";
+            $sql = "UPDATE vetura SET Foto=?,Shenim=? WHERE Id=?";
 
             $statement = $conn->prepare($sql);
             $statement->execute([$foto, $shenim, $id]);
@@ -52,26 +47,26 @@
         }
 
 
-        function deleteCompany($id){
+        function deleteCar($id){
             $conn = $this->connection;
 
-            $sql = "DELETE FROM kompania WHERE Id=?";
+            $sql = "DELETE FROM vetura WHERE Id=?";
 
             $statement = $conn->prepare($sql);
             $statement->execute([$id]);
         }
 
 
-        function getCompanyById($id){
+        function getCarById($id){
             $conn = $this->connection;
 
-            $sql = "SELECT * FROM kompania WHERE Id=?";
+            $sql = "SELECT * FROM vetura WHERE Id=?";
 
             $statement = $conn->prepare($sql);
             $statement->execute([$id]);
-            $kompania=$statement->fetch();
+            $vetura=$statement->fetch();
 
-            return $kompania;
+            return $car;
         }
 
     }

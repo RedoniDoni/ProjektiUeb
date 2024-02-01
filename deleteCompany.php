@@ -1,6 +1,6 @@
 <?php
 include_once 'CompanyRepository.php';
-$id = $_GET['id'];//e merr id prej url
+$id = $_GET['id'];
 
 $strep = new CompanyRepository();
 $strep->deleteCompany($id);

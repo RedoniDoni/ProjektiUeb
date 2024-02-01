@@ -1,10 +1,10 @@
 <?php
-class Kompania{
-    private $Id;
+class Vetura{
+    private $Id; 
     private $Foto;
     private $Shenim;
 
-    public function __construct($id,$f,$sh){
+    public function __construct($id,$f, $sh){
         $this->Id=$id;
         $this->Foto=$f;
         $this->Shenim=$sh;

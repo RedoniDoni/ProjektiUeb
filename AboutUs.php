@@ -1,3 +1,8 @@
+<?php
+include_once 'CompanyRepository.php';
+$companyRepository = new CompanyRepository();
+$companys = $companyRepository->getAllCompanys();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,6 +22,8 @@
         <li><a href="Prices.php">Prices</a></li>
         <li><a href="AboutUs.php">About Us</a></li>
         <li><a href="History.php">History</a></li>
+        <li><a href="Dashboard.php" class="<?php echo $hide?>">Dashboard</a></li>
+        <li><a href="LogInForm.php">Log Out</a></li>
       </ul>
     </nav>
     <div class="header-right">
@@ -26,47 +33,57 @@
     </div>
   </header>
   <main>
+      <?php foreach ($companys as $company) { ?>
+            <div class="image-text-container">
+                <div class="image-container">
+                    <img src="<?php echo $company['Foto']; ?>" alt="Company Photo">
+                </div>
+                <div class="text-container">
+                    <p><?php echo $company['Shenim']; ?></p>
+                </div>
+            </div>
+        <?php } ?>
       <div class="image-text-container">
           <div class="image-container">
-              <img src="img15.jpg" alt="Photo 15">
+              <!-- <img src="img15.jpg" alt="Photo 15"> -->
           </div>
           <div class="text-container">
-              <p>Kompania jonë gjendet në lokacione të ndryshme të Kosovës.  Momentalisht gjendemi në 5 pika kryesore : Prishtinë, Prizren, 
+              <!-- <p>Kompania jonë gjendet në lokacione të ndryshme të Kosovës.  Momentalisht gjendemi në 5 pika kryesore : Prishtinë, Prizren, 
                 Pejë, Kamenicë dhe Gjakovë!
-              </p>
+              </p> -->
           </div>
       </div>
       <div class="image-text-container">
           <div class="image-container">
-              <img src="img16.jpg" alt="Photo 16">
+              <!-- <img src="img16.jpg" alt="Photo 16"> -->
           </div>
           <div class="text-container">
-              <p>Edhe pse ne nuk jemi prodhues, gjithmonë i testojmë veturat tona rregullisht, sepse siguria e konsumatorëve është
+              <!-- <p>Edhe pse ne nuk jemi prodhues, gjithmonë i testojmë veturat tona rregullisht, sepse siguria e konsumatorëve është
                 parësore për ne!
-              </p>
+              </p> -->
           </div>
       </div>
       <div class="image-text-container">
           <div class="image-container">
-              <img src="img17.webp" alt="Photo 17">
+               <!-- <img src="img17.webp" alt="Photo 17"> -->
           </div>
           <div class="text-container">
-              <p>Në secilen lokacion të kompanisë sonë, gjenden mjaftueshëm përfaqësues që mundohen të japin detaje dhe përgjigje për 
+              <!-- <p>Në secilen lokacion të kompanisë sonë, gjenden mjaftueshëm përfaqësues që mundohen të japin detaje dhe përgjigje për 
                 çdo pyetje eventuale të konsumatorëve!
-              </p>
+              </p> -->
           </div>
       </div>
       <div class="image-text-container">
           <div class="image-container">
-              <img src="img18.jpg" alt="Photo 18">
+              <!-- <img src="img18.jpg" alt="Photo 18"> -->
           </div>
           <div class="text-container">
-              <p>Kompania jonë operon për më shumë se 20 vite. Filluam me 2 vetura, ndërsa sot kemi mbi 200 vetura në dispozicion. Saktësia dhe siguria në 
-          çdo aspekt na dallojnë nga kompanitë tjera ekzistuese!</p>
+             <!-- <p>Kompania jonë operon për më shumë se 20 vite. Filluam me 2 vetura, ndërsa sot kemi mbi 200 vetura në dispozicion. Saktësia dhe siguria në 
+          çdo aspekt na dallojnë nga kompanitë tjera ekzistuese!</p> -->
           </div>
       </div>
   </main>
-    <footer>
+  <footer>
         <div class="footer-left">
           <h1 style="color: black;"><b>RINAS COMPANY</b></h1>
           <p>Rinas Company is a rent a car company that has been operating perfectly for more than 20 years.</p>
@@ -98,6 +115,6 @@
             <img src="snapchat-icon.png" alt="Snapchat Icon" width="40px" height="32px"/>
           </div>
         </div>
-    </footer>
+      </footer>
 </body>
 </html>

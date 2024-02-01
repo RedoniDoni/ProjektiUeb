@@ -18,6 +18,8 @@
           <li><a href="Prices.php">Prices</a></li>
           <li><a href="AboutUs.php">About Us</a></li>
           <li><a href="History.php">History</a></li>
+          <li><a href="Dashboard.php" class="<?php echo $hide?>">Dashboard</a></li>
+          <li><a href="LogInForm.php">Log Out</a></li>
         </ul>
       </nav>
       <div class="header-right">

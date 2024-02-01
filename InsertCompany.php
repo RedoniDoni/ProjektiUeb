@@ -22,25 +22,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tickets</title>
-    <link rel="stylesheet" href="InsertHistory.css">
+    <title>Company</title>
+    <link rel="stylesheet" href="InsertCompany.css">
 </head>
 <body>
-    <main>
-        <h1>Insert Companys</h1>
+    <?php
+        include 'header.php';
+    ?>
+  <main>
+    <fieldset>
+        <h1>Insert Company</h1>
         <div class="container">
             <form action="<?php echo $_SERVER['PHP_SELF']?>" method="POST">
-                <label>Foto:</label>
-                <input type="text" name="foto">
+                <div class="form-group">
+                    <label>Foto:</label>
+                    <input type="text" name="foto">
+                </div>
 
-                <label>Shenim:</label>
-                <input type="text" name="shenim">
+                <div class="form-group">
+                    <label>Shenim:</label>
+                    <input type="text" name="shenim">
+                </div>
 
                 <div class="butoniSave">
                     <button type="submit" name="submit" class="saveButton">Save</button>
                 </div>
             </form>
         </div>
-    </main>
+    </fieldset>
+</main>
+    <?php
+        include 'footer.php';
+    ?>
 </body>
 </html>

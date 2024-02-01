@@ -17,6 +17,8 @@
         <li><a href="Prices.php">Prices</a></li>
         <li><a href="AboutUs.php">About Us</a></li>
         <li><a href="History.php">History</a></li>
+        <li><a href="Dashboard.php" class="<?php echo $hide?>">Dashboard</a></li>
+        <li><a href="LogInForm.php">Log Out</a></li>
       </ul>
     </nav>
     <div class="header-right">
@@ -41,39 +43,39 @@
       <p id="kilometra">Kilometra:</p>
     </div>
   </main>
-    <footer>
-      <div class="footer-left">
-        <h1 style="color: black;"><b>RINAS COMPANY</b></h1>
-        <p>Rinas Company is a rent a car company that has been operating perfectly for more than 20 years.</p>
-      </div>
-  
-      <div class="footer-center">
-        <div><p style="font-size: 20px;"><b>Contact Us</b></p></div>
-        <div>
-          <img src="location-icon.png" alt="Location Icon" width="32px" height="32px"/>
-          Prishtine
+  <footer>
+        <div class="footer-left">
+          <h1 style="color: black;"><b>RINAS COMPANY</b></h1>
+          <p>Rinas Company is a rent a car company that has been operating perfectly for more than 20 years.</p>
         </div>
-        <div>
-          <img src="email-icon.png" alt="Email Icon" width="32px" height="32px"/>
-          rinas.company@gmail.com 
+    
+        <div class="footer-center">
+          <div><p style="font-size: 20px;"><b>Contact Us</b></p></div>
+          <div>
+            <img src="location-icon.png" alt="Location Icon" width="32px" height="32px"/>
+            Prishtine
+          </div>
+          <div>
+            <img src="email-icon.png" alt="Email Icon" width="32px" height="32px"/>
+            rinas.company@gmail.com 
+          </div>
+          <div>
+            <img src="phone-icon.png" alt="Phone Icon" width="32px" height="32px"/>
+            049 111 222
+          </div>
         </div>
-        <div>
-          <img src="phone-icon.png" alt="Phone Icon" width="32px" height="32px"/>
-          049 111 222
+    
+        <div class="footer-right">
+          <p style="font-size: 20px;"><b>Visit Us</b></p>
+          <div class="social-icons">
+            <img src="instagram-icon.png" alt="Instagram Icon" width="40px" height="32px"/>
+            <img src="facebook-icon.png" alt="Facebook Icon" width="40px" height="32px"/>
+            <img src="twitter-icon.png" alt="Twitter Icon" width="40px" height="32px"/>
+            <img src="youtube-icon.png" alt="YouTube Icon" width="40px" height="32px"/>
+            <img src="snapchat-icon.png" alt="Snapchat Icon" width="40px" height="32px"/>
+          </div>
         </div>
-      </div>
-  
-      <div class="footer-right">
-        <p style="font-size: 20px;"><b>Visit Us</b></p>
-        <div class="social-icons">
-          <img src="instagram-icon.png" alt="Instagram Icon" width="40px" height="32px"/>
-          <img src="facebook-icon.png" alt="Facebook Icon" width="40px" height="32px"/>
-          <img src="twitter-icon.png" alt="Twitter Icon" width="40px" height="32px"/>
-          <img src="youtube-icon.png" alt="YouTube Icon" width="40px" height="32px"/>
-          <img src="snapchat-icon.png" alt="Snapchat Icon" width="40px" height="32px"/>
-        </div>
-      </div>
-    </footer>
+      </footer>
   
     <script>
       let i = 0;

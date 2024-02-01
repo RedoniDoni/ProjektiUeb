@@ -11,7 +11,7 @@
         }
 
 
-        public function insertHystory($historia){
+        public function insertHistory($historia){
             $conn = $this->connection;
 
             $pershkrimi = $historia->getPershkrimi();
@@ -41,8 +41,7 @@
         }
 
 
-        //Pjesa tjeter e funksioneve CRUD: update 
-        //dergohet parametri ne baze te cilit e identifikojme studentin (ne kete rast id, por mund te jete edhe ndonje atribut tjeter) dhe parametrat e tjere qe mund t'i ndryshojme (emri, mbiemri, etj...)
+        
         public function editStudent($id, $pershkrimi, $vitet, $nrvetura, $nrqira,$vleresimi, $para, $shpenzime, $fitim){
             $conn = $this->connection;
             $sql = "UPDATE historia SET Pershkrimi=?,Vitet=?, NrVetura=?, NrQira=?,Vleresimi=?,Para=?,Shpenzime=?,Fitim=? WHERE Id=?";
@@ -54,7 +53,7 @@
 
         }
 
-        //delete
+        
 
         function deleteHistory($id){
             $conn = $this->connection;
@@ -65,7 +64,7 @@
             $statement->execute([$id]);
         }
 
-        //shtese per update: merr studentin ne baze te Id
+        
 
         function getHistoryById($id){
             $conn = $this->connection;

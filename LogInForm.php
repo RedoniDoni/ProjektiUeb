@@ -6,7 +6,6 @@ include_once 'UserRepository.php';
     if(empty($_POST['emailInput']) || empty($_POST['passwordInput'])){
       echo "Please fill the required fields!";
     }else{
-        //validate
         $email = $_POST['emailInput'];
         $password = $_POST['passwordInput'];
 
