@@ -66,9 +66,6 @@ main {
     margin: 0 auto; 
     padding: 20px;
 }
-p{
-    font-weight: bold;
-}
 fieldset {
     border: 7px solid gray; 
     border-radius: 40px;
@@ -90,6 +87,7 @@ legend {
     text-align: center; 
     margin-right: 20px;
     margin-bottom: 25px;
+    font-weight: bold;
 }
 
 .image-container img {

@@ -1,6 +1,7 @@
 <?php
     include_once 'Kompania.php';
     include_once 'CompanyRepository.php';
+    include_once 'UserRepository.php';
 
     if ($_SERVER['REQUEST_METHOD'] == "POST"){
 
@@ -16,8 +17,33 @@
             $companyRepository->insertCompany($company);
         }
     }
+    
+    $companyError= '';
+    if ($_SERVER['REQUEST_METHOD'] == "POST"){
+
+        $foto = $_POST['foto'];
+        $shenim = $_POST['shenim'];
+
+        if(empty($festival) || empty($time)){
+            echo '<script>alert("Please fill all fields!");</script>';
+        } else {
+            if(isset($_SESSION['id'])){
+                $id = $_SESSION['id'];
+                $userRepository = new UserRepository();
+                $user = $userRepository->getUserById($id);
+                $company = new Companys(null, $foto, $shenim, $user['fullName'], '');
+                $companyRepository = new CompanyRepository();
+                $companyRepository->insertCompany($company);
+                echo "<script>alert('Ticket added successfully!');</script>";
+            }
+        }
+    }
+
+
+
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -57,3 +83,6 @@
     ?>
 </body>
 </html>
+
+
+

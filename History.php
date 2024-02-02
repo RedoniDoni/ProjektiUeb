@@ -58,50 +58,45 @@
             </div>
           </div>
         <?php } ?>
+      <!--
       </div>
             <div class="image-container">
-              <!--
                 <img src="img20.jpg" alt="Foto 20">
                 <p>Veturat tona në vitin 2003</p>
-              -->
             </div>
+
             <div class="image-container">
-              <!--
                 <img src="img21.png" alt="Foto 21">
                 <p>Disa nga veturat tona në vitin 2006</p>
-              -->
             </div>
+
             <div class="image-container">
-              <!--
                 <img src="img22.jpg" alt="Foto 22">
                 <p>Disa nga veturat tona në vitin 2010</p>
-                -->
             </div>
+
             <div class="image-container">
-              <!--
                 <img src="img23.jpg" alt="Foto 23">
                 <p>Disa nga veturat tona në vitin 2013</p>
-                -->
             </div>
+
             <div class="image-container">
-              <!--
                 <img src="img24.jpg" alt="Foto 24">
                 <p>Disa nga veturat tona në vitin 2020</p>
-                -->
             </div>
+
             <div class="image-container">
-              <!--
                 <img src="img25.webp" alt="Foto 25">
                 <p>Disa nga veturat tona të reja të vitit 2024</p>
-                -->
             </div>
         </div>
+        -->
     </fieldset>
     <fieldset>
       <legend><h2>Historia personale e kompanisë</h2></legend>
       <table id="dynamicTable" border="1">
       <tr>
-              <th></th>
+              <th>Gjendja e kompanisë</th>
               <th>Vitet</th>
               <th>Numri i veturave</th>
               <th>Numri i veturave me qera</th>

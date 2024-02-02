@@ -74,3 +74,27 @@ input {
 .saveButton:hover {
     background-color: #00588f;
 }
+
+@media (max-width: 768px) {
+    fieldset {
+        padding: 20px;
+    }
+
+    h1 {
+        margin-bottom: 20px;
+    }
+
+    input {
+        font-size: 14px;
+    }
+
+    .saveButton {
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    fieldset {
+        max-width: 90%;
+    }
+}

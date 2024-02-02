@@ -20,13 +20,14 @@
 
             $foto = $kompania->getFoto();
             $shenim = $kompania->getShenim();
-            $sql = "INSERT INTO kompania(Foto, Shenim) VALUES (?,?)";
+            $sql = "INSERT INTO kompania(Foto, Shenim, createdBy, modifiedBy) VALUES (?,?,?,?)";
 
             $statement = $conn->prepare($sql);
-            $statement->execute([$foto, $shenim]);
+            $statement->execute([$foto, $shenim, createdBy, modifiedBy]);
 
             echo "<script>alert('U shtua me sukses!')</script>";
         }
+
 
         public function getAllCompanys(){
             $conn = $this->connection;
@@ -73,7 +74,15 @@
 
             return $kompania;
         }
+        function updateCompany($id, $foto, $shenim, $createdBy, $modifiedBy){
+            $conn = $this->connection;
+            $sql = "UPDATE kompania SET Foto=?, Shenim=?, createdBy=?, modifiedBy=?  WHERE id=?";
 
+            $statement = $conn->prepare($sql);
+            $statement->execute([$foto, $shenim, $createdBy, $modifiedBy, $id]);
+
+
+        }
     }
 
 ?>

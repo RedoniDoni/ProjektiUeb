@@ -64,17 +64,12 @@ main {
     flex-direction: column; 
     align-items: center;
     padding: 30px;
+    margin-bottom: 10px;
 }
-p {
-    font-weight: bold;
-    font-size: 18px;
-}
- 
 .image-text-container {
     display: flex;  
     justify-content: space-around;
     align-items: center;
-    margin-bottom: 35px; 
 }
 
 .image-text-container:nth-child(even) {
@@ -91,6 +86,8 @@ p {
     width: 100%;
     box-sizing: border-box;
     padding: 0 30px;
+    font-weight: bold;
+    font-size: 17px;
 }
 
 img {
@@ -126,7 +123,6 @@ footer {
 .social-icons img {
     margin-right: 5px;
 }
-
 @media screen and (max-width: 768px) {
     header {
         flex-direction: column; 

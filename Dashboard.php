@@ -26,8 +26,10 @@ include_once 'UserRepository.php';
         <li><a href="Prices.php">Prices</a></li>
         <li><a href="AboutUs.php">About Us</a></li>
         <li><a href="History.php">History</a></li>
-        <li><a href="Dashboard.php" class="<?php echo $hide?>">Dashboard</a></li>
-        <li><a href="LogInForm.php">Log Out</a></li>
+        <?php if (isset($_SESSION['role']) && $_SESSION['role'] == "admin"): ?>
+          <li><a href="Dashboard.php">Dashboard</a></li>
+        <?php endif; ?>
+        <li><a href="LogOut.php">Log Out</a></li>
       </ul>
     </nav>
     <div class="header-right">
@@ -45,7 +47,6 @@ include_once 'UserRepository.php';
             <ul>
                 <li><a href="LogInForm.php"><button id="insert-button">Insert User</button></a></li>
                 <li><a href="deleteUser.php"><button id="delete-button">Delete User / Edit User</button></a></li>
-                <!--<li><a href="editUser.php"><button id="edit-button">Edit User</button></a></li>-->
             </ul>
         </div>
     </div>

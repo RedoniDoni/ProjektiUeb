@@ -30,8 +30,8 @@ include_once 'UserRepository.php';
           <li><a href="History.php">History</a></li>
           <?php if (isset($_SESSION['role']) && $_SESSION['role'] == "admin"): ?>
           <li><a href="Dashboard.php">Dashboard</a></li>
-        <?php endif; ?>
-          <li><a href="LogInForm.php">Log Out</a></li>
+         <?php endif; ?>
+          <li><a href="LogOut.php">Log Out</a></li>
         </ul>
       </nav>
       <div class="header-right">

@@ -60,3 +60,15 @@ nav ul li a {
     text-decoration: none;
     font-size: 14px;
 }
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center; 
+    }
+
+    .header-right {
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+}

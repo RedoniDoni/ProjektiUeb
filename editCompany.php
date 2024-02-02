@@ -1,13 +1,40 @@
 
 <?php
 include 'CompanyRepository.php';
+include_once 'UserRepository.php';
 $id = $_GET['id'];
 
 $strep = new CompanyRepository();
 $companys = $strep->getCompanyById($id);
 
 
+    
+$companyid = isset($_GET['id']) ? $_GET['id'] : null;
+$id = isset($_SESSION['id']) ? $_SESSION['id'] : null;
+
+$userRepository = new UserRepository();
+$user = $userRepository->getUserById($id);
+
+if($companyid !== null){
+    $companyRepository = new CompanyRepository();
+    $company = $companyRepository->getCompanyById($companyid);
+} 
+else{
+    echo "Error: Id is not set in the URL!";
+}
+if(isset($_POST['edit'])){
+    $id = $companyid;
+    $foto = $_POST['Foto'];
+    $shenim = $_POST['Shenim'];
+    $createdBy = $ticket['createdBy'];
+
+    $ticketsRepository->updateCompany($id, $foto, $shenim, $createdBy, $user['fullName']);
+    echo "<script> alert('Update was successful!'); 
+    window.location = 'companys.php';</script>";
+}
+
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">

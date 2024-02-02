@@ -71,6 +71,7 @@ table {
     border: 5px solid blue;
     border-radius: 30px;
     font-size: 18px;
+    overflow-x: auto;
 }
   
 table th,
@@ -101,6 +102,7 @@ tr:nth-child(even) {
 tr:nth-child(odd) {
     background-color: blue;
 }
+
 footer {
     display: flex;
     justify-content: space-between;
@@ -128,4 +130,41 @@ footer {
   
 .social-icons img {
     margin-right: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center; 
+    }
+
+    .header-right {
+        justify-content: center;
+        margin-top: 20px;
+    }
+    table {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 6px;
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: inline-block;
+        width: 50%; 
+        box-sizing: border-box;
+    }
+
+    .footer-left,
+    .footer-right,
+    .footer-center {
+        flex: 100%;
+        text-align: center;
+    }
 }

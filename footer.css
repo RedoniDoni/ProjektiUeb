@@ -1,3 +1,4 @@
+
 footer {
     display: flex;
     justify-content: space-between;
@@ -25,4 +26,13 @@ footer {
   
 .social-icons img {
     margin-right: 5px;
+}
+@media screen and (max-width: 768px) {
+
+    .footer-left,
+    .footer-right,
+    .footer-center {
+        flex: 100%;
+        text-align: center;
+    }
 }
