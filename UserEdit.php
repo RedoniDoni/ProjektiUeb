@@ -8,7 +8,13 @@ $userid = isset($_GET['id']) ? $_GET['id'] : null;
 $id = isset($_SESSION['id']) ? $_SESSION['id'] : null;
 
 $userRepository = new UserRepository();
-$user = $userRepository->getUserById($userid);
+$user = $userRepository->getUserById($id);
+
+if($userid !== null){
+    $userRepository = new UserRepository();
+    $user = $userRepository->getUserById($userid);
+} 
+
 
 
 if(isset($_POST['editBtn'])){
@@ -19,7 +25,7 @@ if(isset($_POST['editBtn'])){
     $password = $_POST['password'];
     $role = $_POST['role'];
 
-    $userRepository->editUser($id,$emri,$mbiemri,$email,$password,$role);
+    $userRepository->editUser($id, $emri, $mbiemri, $email, $password, $role);
 
     echo "<script> alert('Update was successful!'); 
         window.location = 'users.php';</script>";
@@ -43,7 +49,7 @@ if(isset($_POST['editBtn'])){
     <fieldset>
     <h1>Edit User</h1>
     <div class="container">
-        <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
+        <form action="<?php echo $_SERVER['PHP_SELF'] . '?id=' . $user['id']; ?>" method="post">
             <div class="form-group">
             <label>Emri:</label>
             <input type="text" name="emri"  value="<?php echo $user['emri']?>"> <br> <br> 
