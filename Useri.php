@@ -4,7 +4,7 @@ class User{
     private $emri;
     private $mbiemri;
     private $email;
-    private $pasword;
+    private $password;
     private $role;
     
     public function __construct($id, $emri, $mbiemri, $email, $password, $role) {

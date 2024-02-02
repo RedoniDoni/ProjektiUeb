@@ -26,8 +26,5 @@ class Vetura{
         $this->Shenim = $sh;
     }
 
-    public function __toString(){
-        return "Foto: ".$this->Foto." dhe Shenim ".$this->Shenim;
-    }
 }
 ?>

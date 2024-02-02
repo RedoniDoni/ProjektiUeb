@@ -39,7 +39,7 @@
         
         public function editUser($id, $emri, $mbiemri, $email, $password, $role){
             $conn = $this->connection;
-            $sql = "UPDATE user SET emri=?,mbiemri=?, email=?, password=?,role=? WHERE Id=?";
+            $sql = "UPDATE user SET emri=?,mbiemri=?, email=?, password=?,role=? WHERE id=?";
 
             $statement = $conn->prepare($sql);
             $statement->execute([$emri, $mbiemri, $email, $password, $role, $id]);
@@ -51,7 +51,7 @@
         function deleteUser($id){
             $conn = $this->connection;
 
-            $sql = "DELETE FROM user WHERE Id=?";
+            $sql = "DELETE FROM user WHERE id=?";
 
             $statement = $conn->prepare($sql);
             $statement->execute([$id]);
@@ -60,7 +60,7 @@
         function getUserById($id){
             $conn = $this->connection;
 
-            $sql = "SELECT * FROM user WHERE Id=?";
+            $sql = "SELECT * FROM user WHERE id=?";
 
             $statement = $conn->prepare($sql);
             $statement->execute([$id]);

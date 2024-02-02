@@ -1,21 +1,31 @@
 <?php
-include 'userRepository.php';
-$id = isset($_GET['id']) ? $_GET['id'] : null;
 
-$strep = new UserRepository();
-$user = $strep->getUserById($id);
+include 'header.php';
+include_once 'UserRepository.php';
+
+
+$userid = isset($_GET['id']) ? $_GET['id'] : null;
+$id = isset($_SESSION['id']) ? $_SESSION['id'] : null;
+
+$userRepository = new UserRepository();
+$user = $userRepository->getUserById($userid);
+
 
 if(isset($_POST['editBtn'])){
-    $userId = $id;
+    $id = $userid;
     $emri = $_POST['emri']; 
     $mbiemri = $_POST['mbiemri'];
     $email = $_POST['email']; 
     $password = $_POST['password'];
     $role = $_POST['role'];
 
-    $strep->editUser($id,$emri,$mbiemri,$email,$password,$role);
+    $userRepository->editUser($id,$emri,$mbiemri,$email,$password,$role);
+
     echo "<script> alert('Update was successful!'); 
         window.location = 'users.php';</script>";
+
+
+  
 }
 
 ?>
@@ -29,9 +39,6 @@ if(isset($_POST['editBtn'])){
     <link rel="stylesheet" href="InsertCompany.css">
 </head>
 <body>
-    <?php
-        include 'header.php';
-    ?>
    <main>
     <fieldset>
     <h1>Edit User</h1>

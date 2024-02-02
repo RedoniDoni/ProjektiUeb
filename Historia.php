@@ -80,8 +80,5 @@ class Historia{
         $this->Fitim = $f;
     }
 
-    public function __toString(){
-        return "Pershkrimi: ".$this->Pershkrimi." dhe Vitet ".$this->Vitet;
-    }
 }
 ?>

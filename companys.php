@@ -6,8 +6,6 @@ include_once "CompanyRepository.php";
 $strep = new CompanyRepository();
 $companys = $strep->getAllCompanys();
 
-
-
 ?>
 
 <!DOCTYPE html>
@@ -28,6 +26,7 @@ $companys = $strep->getAllCompanys();
         <table>
             <thead>
             <tr>
+                <th>Id</th>
                 <th>Foto</th>
                 <th>Shenim</th>
                 <th>Edit</th>
@@ -39,12 +38,13 @@ $companys = $strep->getAllCompanys();
             <tbody>
                 <?php foreach($companys as $company) { ?> 
                     <tr>
+                        <td><?php echo $company['id'];?></td>
                         <td><?php echo $company['Foto'];?></td>
                         <td><?php echo $company['Shenim'];?></td>
-                        <td><a href='editCompany.php?id=<?php echo $company['Id']?>'>Edit</a></td> 
-                        <td><a href='deleteCompany.php?id=<?php echo $company['Id']?>'>Delete</a></td>
-                        <td></td>
-                        <td></td>
+                        <td><a href='editCompany.php?id=<?php echo $company['id']?>'>Edit</a></td> 
+                        <td><a href='deleteCompany.php?id=<?php echo $company['id']?>'>Delete</a></td>
+                        <td><?php echo $company['createdBy'];?></td>
+                        <td><?php echo $company['modifiedBy'];?></td>
                     </tr>
                 <?php }?> 
             </tbody>

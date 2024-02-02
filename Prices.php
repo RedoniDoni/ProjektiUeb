@@ -1,12 +1,16 @@
 <?php
 
+  include_once 'PriceRepository.php';
+  $priceRepository = new PriceRepository(); 
+  $prices = $priceRepository->getAllPrices();
+
   include_once 'UserRepository.php';
   session_start();
   if (!isset($_SESSION['role'])) {
     header("location: LogInForm.php");
     exit();
   }
-
+  
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -45,7 +49,7 @@
           <legend> Prices for Cars</legend>
           <table border = "1">
               <tr>
-                  <th></th>
+                  <th>Numri</th>
                   <th>Marka</th>
                   <th>Modeli</th>
                   <th>Viti</th>
@@ -57,7 +61,23 @@
                   <th>Çmimi për një javë</th>
                   <th>Çmimi për një muaj</th>
               </tr>
-
+              </tr>
+            <?php foreach ($prices as $price) { ?>
+              <tr>
+                <th><?php echo $price['pershkrimi']; ?></th>
+                <td><?php echo $price['marka']; ?></td>
+                <td><?php echo $price['modeli']; ?></td>
+                <td><?php echo $price['viti']; ?></td>
+                <td><?php echo $price['kilometra']; ?></td>
+                <td><?php echo $price['shpenzime']; ?></td>
+                <td><?php echo $price['sigurimi']; ?></td>
+                <td><?php echo $price['cmimio']; ?></td>
+                <td><?php echo $price['cmimid']; ?></td>
+                <td><?php echo $price['cmimij']; ?></td>
+                <td><?php echo $price['cmimim']; ?></td>
+              </tr>
+            <?php } ?>
+            <!--
               <tr>
                   <th>Vetura 1</th>
                   <td>Audi</td>
@@ -214,6 +234,7 @@
                   <td>1660€</td>
                   <td>8188€</td>
               </tr>
+          -->
           </table>
       </fieldset>
   </main>

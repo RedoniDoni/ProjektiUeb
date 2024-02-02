@@ -45,7 +45,7 @@ include_once 'UserRepository.php';
         <div class="operation-content">
             <p>Insertimi, fshirja dhe editimi i user-ave:</p>
             <ul>
-                <li><a href="LogInForm.php"><button id="insert-button">Insert User</button></a></li>
+                <li><a href="InsertUser.php"><button id="insert-button">Insert User</button></a></li>
                 <li><a href="deleteUser.php"><button id="delete-button">Delete User / Edit User</button></a></li>
             </ul>
         </div>
@@ -61,18 +61,20 @@ include_once 'UserRepository.php';
     </div>
     <div class="operation-group">
         <div class="operation-content">
-            <p>Insertimi i veturave:</p>
+            <p>Insertimi dhe fshirja e veturave:</p>
             <ul>
                 <li><a href="InsertCar.php"><button id="insert-button">Insert Car</button></a></li>
+                <li><a href="deleteCar.php"><button id="delete-button">Delete Car</button></a></li>
             </ul>
         </div>
     </div>
 
     <div class="operation-group">
         <div class="operation-content">
-            <p>Insertimi i historive:</p>
+            <p>Insertimi dhe fshirja e historive:</p>
             <ul>
                 <li><a href="InsertHistory.php"><button id="insert-button">Insert History</button></a></li>
+                <li><a href="deleteHistory.php"><button id="delete-button">Delete History</button></a></li>
             </ul>
         </div>
     </div>
